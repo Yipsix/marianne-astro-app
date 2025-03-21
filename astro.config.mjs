@@ -5,6 +5,8 @@ import sharp from 'sharp';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://Yipsix.github.io',
+  base: 'marianne-astro-app',
   integrations: [tailwind(), react()],
   assets: {
     addSharpInstructions: true,

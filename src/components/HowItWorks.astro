@@ -15,15 +15,17 @@ const steps = [
 ];
 ---
 
-<section class="py-20 bg-white">
+<section class="py-20 bg-white" id="kvalifikationer">
   <div class="container mx-auto px-4">
-    <h2 class="text-4xl font-serif font-bold text-center mb-16">Uddannelser</h2>
+    <h2 class="text-4xl font-serif font-bold text-center mb-16">kvalifikationer</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {steps.map((step, index) => (
         <div class="bg-gray-50 p-8 rounded-lg text-center" id={`step-${index.toString()}`}>
-          <svg class="w-16 h-16 mx-auto mb-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div class="row">
+            <svg class="w-16 h-16 mx-auto mb-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-inejoin="round" stroke-width={2} d={step.icon} />
           </svg>
+          </div>
           <p class="text-gray-700">{step.description}</p>
         </div>
       ))}

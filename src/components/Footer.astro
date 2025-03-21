@@ -2,8 +2,10 @@
 import { Image } from 'astro:assets';
 import logoImg from '../assets/logo.png';
 
-const footerLinks = [
-  { label: 'Home', href: '#' },
+const navItems = [
+  { label: 'Services', href: '#services' },
+  { label: 'kvalifikationer', href: '#kvalifikationer' },
+  { label: 'Om firmaet', href: '#firma' },
 ];
 ---
 
@@ -11,20 +13,13 @@ const footerLinks = [
   <div class="container mx-auto px-4">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
       <div>
-        <Image 
-          src={logoImg} 
-          alt="Company Logo Image" 
-          class="rounded-lg"
-          width={48}
-          height={48}
-        />
         <p class="font-serif font-bold pt-2 text-xl">beskæringskompagniet</p>
         <p class="text-sm pt-2">Stort - som småt</p>
       </div>
       <div>
         <h3 class="text-lg font-semibold mb-4">Links</h3>
         <ul class="space-y-2">
-          {footerLinks.map((link) => (
+          {navItems.map((link) => (
             <li>
               <a href={link.href} class="text-sm hover:text-primary-300">{link.label}</a>
             </li>
@@ -33,7 +28,7 @@ const footerLinks = [
       </div>
     </div>
     <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-      <p class="text-sm mb-4 md:mb-0">&copy; 2024 beskæringskompagniet Inc. All rights reserved.</p>
+      <p class="text-sm mb-4 md:mb-0">&copy; 2024 beskæringskompagniet</p>
     </div>
   </div>
 </footer>
