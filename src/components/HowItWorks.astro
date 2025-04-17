@@ -2,30 +2,29 @@
 const steps = [
   {
     icon: 'M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z', // Placeholder SVG path for the first icon
-    description: 'We help people with chronic conditions, barriers to accessing healthcare, and distrust of the medical system...'
+    title: 'Cand. hort.',
+    description: 'Kandidatgrad i hortonomi, som er studiet af dyrkning af planter, især i relation til havebrug, frugtavl, grøntsagsproduktion, plantedesign, og bylandskab.'
   },
   {
     icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01', // Placeholder SVG path for the second icon
-    description: '...prioritize their care plans every day by taking medications, monitoring conditions, and getting preventative screenings...'
+    title: 'Klatrende Arborist',
+    description: 'Arbejder i træer ved hjælp af klatreudstyr – typisk reb og seler – i stedet for f.eks. lifte eller kraner. En klatrende arborist har specialiseret sig i at arbejde sikkert og effektivt oppe i trækronerne, ofte i højder og svært tilgængelige områder.'
   },
   {
     icon: 'M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z', // Placeholder SVG path for the third icon
-    description: '...to help organizations meet and exceed goals for cost, quality, and health outcomes.'
+    title: 'ETW-certificeret',
+    description: 'Certificeret European Tree Worker (ETW) – en europæisk standard for fagligt kvalificerede træplejere. Certificeringen administreres af European Arboricultural Council (EAC), og den har til formål at sikre, at træplejere i Europa arbejder efter fælles faglige og sikkerhedsmæssige standarder.'
   }
 ];
 ---
 
 <section class="py-20 bg-white" id="kvalifikationer">
   <div class="container mx-auto px-4">
-    <h2 class="text-4xl font-serif font-bold text-center mb-16">kvalifikationer</h2>
+    <h2 class="text-4xl font-serif font-bold text-center mb-16">Kvalifikationer</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {steps.map((step, index) => (
         <div class="bg-gray-50 p-8 rounded-lg text-center" id={`step-${index.toString()}`}>
-          <div class="row">
-            <svg class="w-16 h-16 mx-auto mb-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-inejoin="round" stroke-width={2} d={step.icon} />
-          </svg>
-          </div>
+          <p class="text-green-600 h-20 text-xl font-semibold">{step.title}</p>
           <p class="text-gray-700">{step.description}</p>
         </div>
       ))}
