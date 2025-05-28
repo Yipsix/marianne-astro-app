@@ -1,4 +1,4 @@
-# Marianne astro app
+# Marianne app
 
 NOTE - Heavily Inspired by - https://www.wellthapp.com/
 
